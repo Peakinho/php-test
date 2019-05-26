@@ -8,8 +8,10 @@
   $subject = $_REQUEST['subject'];
   $comment = $_REQUEST['comment'];
 
+
   //send email
   mail($admin_email, "$subject", $comment, "From:" . $email);
+  'Location: thank_you.php'
 
   //Email response
   echo "Thank you for contacting us!";
@@ -19,7 +21,7 @@
   else  {
 ?>
 
- <form method="post">
+ <form method="post" action="redirect.html">
 
   Email: <input name="email" type="text" />
 
